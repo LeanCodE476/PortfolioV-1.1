@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="shortcut icon" href="images/icon.ico" type="image/x-icon">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css">
+    
+    <link rel="stylesheet" href="node_modules/eins-modal/dist/css/eins-modal.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Portfolio Leandro Balmaceda V1.1</title>
+</head>
+<body>
+        <header class="container-header" >
+            <nav>
+                <ul>
+                    <li><a href="#about-me">Sobre mi<span class="barra-about-me">/</span>Contacto</a></li>
+                    <li><a href="#skill">Skills</a></li>
+                    <li><a href="#briefcase">Proyectos</a></li>
+                    <li><a href="#footer">Code with me</a></li>
+                </ul>
+            </nav>
+        </header> 
+        <!-- BURGUER-BOTON -->
+         <button class="panel-btn hamburger hamburger--vortex fondo-btn" type="button"> 
+           <span class="hamburger-box ">
+          <span class="hamburger-inner"></span>
+          </span>
+         </button> 
+      <section class="about-me" id="about-me">
+           <p class="parrafo-about-me"><span class="bienvenido">Bienvenido!</span> <br><span class="im-leandro">Soy Leandro Balmaceda <br></span> <span class="text-general">Desarrollador Web, hace 1 año me adentre en el area de Front-End y dia a dia aprendo mas, me apasiona el mundo de la programacion y la tecnologia. Me gusta enfrentar nuevos desafios, enfrentarme a ellos me genera nuevos conocimientos y experiencias para mejorar dia a dia. Me interesa mejorar mis habilidades colaborando en nuevos proyectos para generar y optimizar ideas llevando la programacion a un siguiente nivel.</span></p>
+             <div class="academy">
+                <img loading='lazy' src="images/gorro.webp" alt="logo-academy">
+                <p>Diplomatura Programador Full-Stack UTNfre (2021).<a href="https://drive.google.com/file/d/1zsyC3SVSXTmTE3MGfQsrWTd4mvr8-Jni/view?usp=sharing" rel="noopener" target="_blank" class="academy-scale">Ver certificado</a></p>
+            </div>
+            <div class="conect-with-me">
+
+            <p class="contact-me">Conectemos</p>
+            <div class="container-box-contact">
+                    <div class="container-img-contact"><p class="p-contact">GitHub</p>
+                        <a href="https://github.com/LeanCodE476" target="_blank" rel="noopener"><img src="images/github.webp" alt="github" loading='lazy'></a>
+                        </div>
+                        <div class="container-img-contact"><p class="p-contact">LinkedIn</p>
+                         <a href="https://www.linkedin.com/in/leandro-balmaceda-28b518209/" target="_blank" rel="noopener"><img src="images/linkedin-logo.webp" alt="linkedin-logo" loading='lazy'></a>
+                        </div>
+                        <div class="container-img-contact"><p class="p-contact">Gmail</p>
+                            <a data-modal-id="message"><img src="images/gmail-logo.webp" alt="gmail-logo" loading='lazy'></a>
+                        </div>
+            </div>                  
+            </div>
+      </section>
+      <section class="skills" id="skill">
+          <div class="container-skills">
+              <h2 class="text-h2-skill">Habilidades</h2>
+              <p>-En un futuro cercano agregare <span class="react-span">React.js <img src="images/react-logo.webp" alt="react-logo" loading='lazy'></span> y <span class="node-span">Node.js <img src="images/nodejs-logo.webp" alt="nodejs-logo" loading='lazy'> </span> ya que son lenguajes que deseo aprender.</p>
+              <h3>Actualmente me desempeño con las siguientes tecnologias</h3>
+              <div class="container-img-skills">
+                  <div class="container-img-and-text border-bottom border-right">
+                      <h5>HTML</h5>
+                      <img src="images/html-logo.webp" alt="Html-logo" class="html-logo-size" loading='lazy'>
+                    </div>
+                  <div class="container-img-and-text border-bottom box-css border-bottom" >
+                    <h5>CSS</h5>
+                      <img src="images/css-logo.webp" alt="Css-Logo" loading='lazy'>
+                    </div>
+                  <div class="container-img-and-text border-bottom border-right">
+                      <h5>SASS</h5>
+                      <img src="images/sass-logo.webp" alt="Sass-logo" loading='lazy'>
+                    </div>
+                     <div class="container-img-and-text border-bottom ">
+                      <h5>BOOTSTRAP</h5>
+                      <img src="images/boostrap-logo.webp" alt="boostrap-logo" loading='lazy'>
+                    </div>
+                  <div class="container-img-and-text border-right">
+                      <h5>JAVASCRIPT</h5>
+                      <img src="images/javascript-logo.webp" alt="JavaScript-Logo" loading='lazy'>
+                    </div>
+                  <div class="container-img-and-text">
+                      <h5>GIT</h5>
+                      <img src="images/git-logo.webp" alt="Git-logo" loading='lazy'> 
+                    </div>
+              </div>
+          </div>
+      </section>
+   <section class="proyects" id="briefcase">
+            <div class="briefcase-section">
+                <H2>PROYECTOS</H2>
+                <div class="modal-proyect-grid">
+                    <div><a data-modal-id="proyect-1"><img src="img/Amoled-Backgrounds.png" alt="" loading='lazy'></a></div>
+                    <div><a data-modal-id="myModal"><img src="img/Amoled-Backgrounds.png" alt=""loading='lazy'></a></div>
+                </div>
+            </div>
+        </section>
+        <footer id="footer">
+            <h3>Estas aprendiendo programacion y tienes dudas?</h3>
+            <h4>Contactame, puedo ayudarte con gusto!</h4>
+            <div class="container-contact-footer gradient-border" id="box">
+               <h4 class="h4-footer" ><a href="#about-me" ">Conectemos!</a></h4>
+            </div>
+            <p>Copyright © Leandro Balmaceda 2022</p>
+            <div class="version"><p class="version-">
+                V1.1
+            </p></div>
+        </footer>
+
+    <!-- **********************MODAL-EINS********************************** -->
+       <!-- modal section proyect-1-->
+          <div id="proyect-1" class="eins-modal" data-options="openTransition: expandIn; openDuration:200;">
+            <div class="eins-modal-content">
+                <div class="eins-modal-close"></div>
+                    <div class="pw-content">
+                        <h1>PROYECTO X</h1>
+                        <div class="img-proyect">
+                            <img src="img/web-image.jpg" alt="" loading='lazy'>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, aperiam repellat dolor dolorum ratione dicta ullam provident repudiandae nihil quibusdam aspernatur ea molestias, vel praesentium eligendi quasi laborum? Totam, repellendus?</p>
+                        <a href="">Ver pagina</a>
+                        
+                    </div>
+            </div>
+        </div>
+
+
+<!-- *******************FORM************************* -->
+    <div id="message" class="eins-modal" data-options="openTransition: expandIn; openDuration:200;">
+            <div class="eins-modal-content">
+                <div class="eins-modal-close"></div>
+               <form action="https://formspree.io/f/mgednqwg" method="post" class="form">
+                    <label for="email">Tu correo electronico:</label>
+                    <input name="Email" id="email" type="email" name="_replyto" class="email-background" required>
+                    <label>Tu mensaje:</label>
+                        <textarea name="message" required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+    <!-- ******************* FIN FORM************************* -->
+    <script src="app.js"></script>
+    <script src="node_modules/eins-modal/dist/js/eins-modal.min.js"></script>
+</body>
+</html>

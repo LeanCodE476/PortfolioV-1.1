@@ -1,0 +1,533 @@
+$color-rosa:#FF1493;
+$color-yellow: rgb(255, 255, 0);
+$color-black: rgb(0, 0, 0);
+$color-white:rgb(255, 255, 255);
+$font-family:'Mukta',
+sans-serif;
+$color-background:rgb(0, 0, 0);
+$color-border:rgb(183, 0, 255);
+
+// ANIMACIONES
+
+@keyframes shake {
+    10%{
+        transform: rotate(15deg);
+    }
+    20%{
+        transform: rotate(-15deg);
+    }
+    30%{
+        transform: rotate(15deg);
+                transform: scale(1.2);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+   
+}
+
+@keyframes moverFondo{
+
+    0%{
+        background-position: (50%,25%);
+        background-size: 270%;
+    } 
+   
+}
+
+
+// FIN ANIMACIONES
+*{
+    margin:0; 
+    padding:0;
+    box-sizing:border-box;
+}
+html{
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: $color-background;
+    font-family: $font-family;
+}
+ .container-header{
+         display: flex;
+         justify-content: end;
+         grid-area: header;
+         height: 7rem;
+         position: sticky;
+            top: 0;
+            z-index: 999;
+        nav{
+                width: 60rem;
+                backdrop-filter: blur(1rem);
+                -webkit-backdrop-filter: blur(1rem);
+                border-radius: 10px;
+                border: 1px solid rgba(255, 255, 255, 0.18);
+
+                ul{
+            display: flex;
+            justify-content: space-around;
+            list-style-type:none ;
+            margin-top: 1rem;
+            li{
+                    a{
+                            font-size: 2.5rem;
+                            color: $color-white;
+                            text-decoration: none;
+                            .barra-about-me{
+                                    color: $color-yellow;
+                                }
+                                &:hover{
+                                    color: $color-rosa;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                // **********STYLES NAV-VAR-BURGUER*********************
+                .panel-btn {
+                        position: fixed;
+                        background-color: rgba(255, 255, 255, 0.911);      
+                        .fondo-btn {
+                                background-color: #f9faff;
+                            }
+                        }
+                        .hamburger {
+                                border-radius: 10%;
+                                visibility: hidden;
+                                margin-top:85vh;
+                               }
+.about-me{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url(images/Amoled-Backgrounds.webp);
+    background-size: 150%;
+    animation: moverFondo 20s infinite alternate;
+    background-repeat: no-repeat;
+    border-bottom:1px solid $color-white;
+
+    .parrafo-about-me{
+        font-size: 2rem;
+        width: 50%;
+        min-width: 30rem;
+        background: rgba(255, 255, 255, 0.05);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(12.5px);
+        -webkit-backdrop-filter: blur(12.5px);
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        padding: 2rem;
+        
+        .bienvenido{
+            font-size: 5rem;
+            font-weight: 700;
+            color:$color-yellow;
+
+        }
+        .im-leandro{
+           color:$color-rosa; 
+           font-size: 4rem;
+           font-weight: 900;
+
+        }
+        .text-general{
+            color: $color-white;
+        }
+
+    }
+    .academy{
+        display: flex;
+        justify-content: center;
+        width: 50%;
+        margin: 2rem 0 0 0;
+    //    border-bottom: 1px solid $color-white;
+       background: rgba(255, 255, 255, 0.05);
+        box-shadow: 0 8px 32px 0 rgba(95, 87, 13, 0.37);
+        backdrop-filter: blur(6rem);
+        -webkit-backdrop-filter: blur(6rem);
+        img{
+           height:3rem;
+           margin: 0 1rem 0 0  ;
+        }
+        p{
+            font-size: 1.6rem;
+            color: $color-white;
+        }
+        a{
+            margin-left: 1rem;
+            color: $color-rosa;
+            text-decoration: none;
+            font-size: 1.4rem;
+            &:hover{
+                color: $color-yellow;
+            }
+        }
+       
+    }
+.conect-with-me{
+    width: 40%;
+    margin-top: 7rem;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 32px 0 rgba(97, 31, 135, 0.37);
+    backdrop-filter: blur(12.5px);
+    -webkit-backdrop-filter: blur(12.5px);
+    border-radius: 10px;
+    .contact-me{
+        text-align: center;
+        font-size: 2.3rem;
+        color: $color-yellow;
+    }
+    .container-box-contact{
+        display: flex;
+        justify-content: space-around;
+        padding-bottom: 2rem;
+        .container-img-contact{
+       animation: shake 2s infinite;
+            .p-contact{
+                color: $color-white;
+                font-size: 1.4rem;
+            }
+        img{
+            width: 4rem;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+    
+}
+
+}
+
+}
+.eins-modal-content {
+    text-align: center;
+    background-color: rgb(48, 48, 48);
+    height: 35rem;
+    color: $color-white;
+   .img-proyect{
+       margin: AUTO;
+       width: 40rem;
+       height: 15rem;
+       overflow: hidden;
+       img{
+           width: 100%;
+       }
+    }
+    p{
+        font-size: 1.4rem ;
+    }
+    a{
+        color: $color-rosa;
+        text-decoration: none;
+        font-size: 1.8rem;
+        &:hover{
+            color: $color-yellow;
+        }
+    }
+    
+}
+/********************FORM STYLES*******************/
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: 23rem;
+
+    label {
+        color: $color-yellow;
+        font-size: 2rem;
+        margin-top: 2rem;
+    }
+    
+    input {
+        border: none;
+        border: 1px solid $color-white;
+        color: $color-white;
+        background-color: rgba(66, 66, 66, 0.808);
+        width: 70%;
+        font-size: 1.5rem;
+        &:focus{
+            outline: none;
+        }
+        
+    }
+    
+    textarea {
+        background-color: rgb(54, 52, 52);
+        color: $color-white;
+        width: 70%;
+        min-width: 10rem;
+        max-width: 80%;
+        min-height: 10rem;
+        &:focus{
+            outline: none;
+        }
+        
+    }
+    
+    button {
+        margin: auto;
+        background-color: $color-rosa;
+        width: 30%;
+        border: none;
+        padding: .6rem;
+        border-radius: 2px;
+        font-weight: 600;
+        text-transform: uppercase;
+        min-width: 10rem;
+        color: $color-white;
+        margin-top: 2rem;
+        
+        &:hover {
+            background-color: rgb(255, 255, 255);
+        }
+    }
+}
+/******************** FIN FORM STYLES*******************/
+
+.skills{
+    text-align: center;
+    color: $color-white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(img/earth.png);
+    background-position-y: -15rem;
+    background-position-x: center;
+    background-size: 30%;
+    background-repeat: no-repeat;
+    .container-skills{
+        width: 95%;
+        min-width: 30rem;
+         backdrop-filter: blur(.2rem);
+        .text-h2-skill{
+            font-size: 4rem;
+           text-decoration: 3px underline  $color-border; 
+        }
+        h3{
+            font-size: 2rem;
+            margin-top: 3rem;
+        }
+        h5{
+            font-size: 1.6rem;
+        }
+        p{
+            font-size: 2rem;
+            .react-span{
+                color: rgb(0, 217, 255);
+            }
+            .node-span {
+                color: rgb(49, 224, 72);
+            }
+            img{
+                width: 2.5rem;
+                margin-bottom: -.4rem;
+            }
+        }
+        .container-img-skills{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin: 0 auto;
+            padding: 2rem;
+            width: 50%;
+        .html-logo-size{
+            margin-top: 1rem;
+            width: 7.5rem;
+        }
+        img{ 
+            width: 10rem;
+            &:hover{
+                transform: scale(1.2);
+            }
+        }
+        .border-bottom{
+            border-bottom: 1px solid $color-border;
+        }
+        .border-right{
+            border-right: 1px solid $color-border;
+        }
+        
+        }
+
+    }
+
+}
+.proyects{
+    border-top: 1px solid $color-white;
+    height: 100vh;
+    text-align: center;
+    color: $color-white;
+    font-size: 2.5rem;
+    background-image: url(img/astronaut.jpg);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center -50rem;
+
+
+  
+        .briefcase-section{
+            backdrop-filter: blur(.1rem);
+            -webkit-backdrop-filter: blur(.1rem);
+            h2{
+                margin-top: 3rem;
+            }
+
+        }
+    .modal-proyect-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, auto));
+        gap: 1.5rem;
+        width: 50%;
+        margin: 3rem auto;
+
+     
+    }
+    
+    .modal-proyect-grid img {
+        width: 100%;
+        border: 1px solid white;
+        transition: transform .24s ease;
+        z-index: 998;
+    }
+    
+    .modal-proyect-grid img:hover {
+        transform: scale(1.1);
+    }
+    
+    /* EINS MODAL STYLE*/
+        .eins-modal-content {
+            .pw-content{
+                img{
+                    width: 2rem !important;
+                }
+            }
+        }
+    }
+    footer{
+        border-top: 2px solid $color-white;
+        text-align: center;
+        color: $color-white;
+        padding-bottom: 3rem;
+        h3{
+            margin-top: 2rem;
+            font-size: 2rem;
+            font-weight: 300;
+            color: $color-yellow;
+        }
+        h4{
+            font-size: 1.8rem;
+            font-weight: 100;
+        }
+        .h4-footer{
+            a{
+                text-decoration: none;
+                color: $color-rosa;
+                &:hover{
+                    color: $color-yellow;
+                    transform:scale(1.1);
+                }
+            }
+        }
+        p{
+            font-size: 1.3rem;
+        }  
+            .version{
+                .version-{
+                    color: $color-yellow;
+                    margin-left:70% ;
+                    border-top: none;
+                }
+            }
+            
+    }
+    
+  @media (max-width:86.8rem){
+      .about-me{
+          height: auto;
+      }
+    .hamburger {
+        visibility: visible;
+         right: 1rem;
+         top: 1rem;
+        z-index: 999;
+       
+    }
+    //  STYLES HEADER
+    .container-header {
+        opacity: 0;
+        transition: opacity .3s ;
+        nav {
+            text-align: center;
+            height: 0;
+            width: 100%;
+            ul {
+                background-color: rgba(15, 14, 14, 0.925); 
+                display: flex;
+                flex-direction: column;
+                margin-top: 0;
+                border-bottom: 2px solid $color-yellow;
+                padding-bottom: 1rem;
+                li {
+                   margin-top:2rem;
+                    a {
+                        font-size: 2.5rem;
+                        color: $color-white;
+                        text-decoration: none;
+    
+                        .barra-about-me {
+                            color: $color-yellow;
+                        }
+    
+                        &:hover {
+                            color: $color-rosa;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .skills{
+        background-image: url(img/earth.png);
+        background-position-y: -15rem;
+        background-position-x: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        height: none;
+        height: 110rem;
+    }
+.is-active-efect{
+    transition: transform .1s;
+    opacity: 1;
+        transition: opacity .3s;
+}
+.proyects{
+    height: none;
+    height: auto;
+    background-size: 90%;
+    background-position: center 50%;
+}
+  }                          
+     
+@media (max-width:45rem){
+    .container-skills{
+        .container-img-skills{
+            min-width: 30rem;
+
+        }
+    }
+}
+
+
+
+
+
+
+
