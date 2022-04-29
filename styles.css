@@ -346,7 +346,7 @@ form button:hover {
 }
 .proyects .modal-proyect-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, auto));
+  grid-template-columns: repeat(auto-fit, minmax(15rem, auto));
   gap: 1.5rem;
   width: 50%;
   margin: 3rem auto;
