@@ -6,6 +6,8 @@ $font-family:'Mukta',
 sans-serif;
 $color-background:rgb(0, 0, 0);
 $color-border:rgb(183, 0, 255);
+$color-gray:rgb(92, 92, 92);
+$color-gray-claro:rgb(201, 201, 201);
 
 // ANIMACIONES
 
@@ -181,17 +183,85 @@ body{
         font-size: 2.3rem;
         color: $color-yellow;
     }
+    // MODAL STYLES
+    dialog{
+        margin: 2rem auto;
+        width: 100%;
+        height: 100%;
+        background-color: #000000b9;
+        
+        .salir{
+            width: 10rem;
+            padding: 1.5rem;
+            background-color: $color-rosa;
+            font-weight: 600;
+            text-transform: uppercase;
+            &:hover{
+                background-color: $color-white;
+            }
+        }
+        .container-form{
+            transition: all 1s;
+            
+            margin: 20rem auto ;
+            width: 80%;
+            form{
+                border: 2px solid $color-white;
+                display: flex;
+                flex-direction: column;
+            align-items: center;
+            background-color: $color-gray;
+            padding: 4rem;
+            text-align: center;
+            label{
+                color: $color-white;
+                font-size:2.5rem ;
+            }
+            input{
+                font-size: 1.6rem;
+                width: 50%;
+                background-color: $color-gray-claro;
+            }
+            textarea{
+                font-size: 1.6rem;
+                background-color: $color-gray-claro;
+                width: 50%;
+                min-width: 30%;
+                max-width: 50%;
+                min-height: 30%;
+                max-height: 30rem;
+            }
+            
+            .enviar{
+               
+                margin-top: 2rem;
+                width: 50%;
+                background-color: $color-gray-claro;
+                border: none;
+                padding: 1rem;
+                text-transform: uppercase;
+                font-weight: 600;
+                &:hover{
+                    background-color: $color-gray;
+                    color: $color-white;
+                    outline: 1px solid $color-white;
+                }
+            }
+        }
+        }
+    }
     .container-box-contact{
         display: flex;
         justify-content: space-around;
         padding-bottom: 2rem;
         .container-img-contact{
-       animation: shake 2s infinite;
+            animation: shake 2s infinite;
             .p-contact{
                 color: $color-white;
                 font-size: 1.4rem;
             }
-        img{
+            img{
+            cursor: pointer;
             width: 4rem;
             &:hover{
                 transform: scale(1.1);
@@ -204,94 +274,6 @@ body{
 }
 
 }
-.eins-modal-content {
-    text-align: center;
-    background-color: rgb(48, 48, 48);
-    height: 35rem;
-    color: $color-white;
-   .img-proyect{
-       margin: AUTO;
-       width: 40rem;
-       height: 15rem;
-       overflow: hidden;
-       img{
-           width: 100%;
-       }
-    }
-    p{
-        font-size: 1.4rem ;
-    }
-    a{
-        color: $color-rosa;
-        text-decoration: none;
-        font-size: 1.8rem;
-        &:hover{
-            color: $color-yellow;
-        }
-    }
-    
-}
-/********************FORM STYLES*******************/
-
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    height: 23rem;
-
-    label {
-        color: $color-yellow;
-        font-size: 2rem;
-        margin-top: 2rem;
-    }
-    
-    input {
-        border: none;
-        border: 1px solid $color-white;
-        color: $color-white;
-        background-color: rgba(66, 66, 66, 0.808);
-        width: 70%;
-        font-size: 1.5rem;
-        &:focus{
-            outline: none;
-        }
-        
-    }
-    
-    textarea {
-        background-color: rgb(54, 52, 52);
-        color: $color-white;
-        width: 70%;
-        min-width: 10rem;
-        max-width: 80%;
-        min-height: 10rem;
-        &:focus{
-            outline: none;
-        }
-        
-    }
-    
-    button {
-        margin: auto;
-        background-color: $color-rosa;
-        width: 30%;
-        border: none;
-        padding: .6rem;
-        border-radius: 2px;
-        font-weight: 600;
-        text-transform: uppercase;
-        min-width: 10rem;
-        color: $color-white;
-        margin-top: 2rem;
-        
-        &:hover {
-            background-color: rgb(255, 255, 255);
-        }
-    }
-}
-/******************** FIN FORM STYLES*******************/
-
 .skills{
     text-align: center;
     color: $color-white;
@@ -370,9 +352,6 @@ form {
     background-repeat: no-repeat;
     background-size: 80%;
     background-position: center -50rem;
-
-
-  
         .briefcase-section{
             backdrop-filter: blur(.1rem);
             -webkit-backdrop-filter: blur(.1rem);
@@ -396,20 +375,15 @@ form {
         border: 1px solid white;
         transition: transform .24s ease;
         z-index: 998;
+        cursor: pointer;
     }
     
     .modal-proyect-grid img:hover {
         transform: scale(1.1);
     }
-    
-    /* EINS MODAL STYLE*/
-        .eins-modal-content {
-            .pw-content{
-                img{
-                    width: 2rem !important;
-                }
-            }
-        }
+   
+
+      
     }
     footer{
         border-top: 2px solid $color-white;
@@ -462,8 +436,8 @@ form {
     }
     //  STYLES HEADER
     .container-header {
-        opacity: 0;
         transition: opacity .3s ;
+        display: none;
         nav {
             text-align: center;
             height: 0;
@@ -504,9 +478,8 @@ form {
         height: 110rem;
     }
 .is-active-efect{
-    transition: transform .1s;
-    opacity: 1;
-        transition: opacity .3s;
+    display:flex;
+        
 }
 .proyects{
     height: none;
@@ -514,6 +487,8 @@ form {
     background-size: 90%;
     background-position: center 50%;
 }
+
+
   }                          
      
 @media (max-width:45rem){

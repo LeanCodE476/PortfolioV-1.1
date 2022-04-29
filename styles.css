@@ -160,6 +160,68 @@ body {
   font-size: 2.3rem;
   color: yellow;
 }
+.about-me .conect-with-me dialog {
+  margin: 2rem auto;
+  width: 100%;
+  height: 100%;
+  background-color: #000000b9;
+}
+.about-me .conect-with-me dialog .salir {
+  width: 10rem;
+  padding: 1.5rem;
+  background-color: #FF1493;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.about-me .conect-with-me dialog .salir:hover {
+  background-color: white;
+}
+.about-me .conect-with-me dialog .container-form {
+  transition: all 1s;
+  margin: 20rem auto;
+  width: 80%;
+}
+.about-me .conect-with-me dialog .container-form form {
+  border: 2px solid white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #5c5c5c;
+  padding: 4rem;
+  text-align: center;
+}
+.about-me .conect-with-me dialog .container-form form label {
+  color: white;
+  font-size: 2.5rem;
+}
+.about-me .conect-with-me dialog .container-form form input {
+  font-size: 1.6rem;
+  width: 50%;
+  background-color: #c9c9c9;
+}
+.about-me .conect-with-me dialog .container-form form textarea {
+  font-size: 1.6rem;
+  background-color: #c9c9c9;
+  width: 50%;
+  min-width: 30%;
+  max-width: 50%;
+  min-height: 30%;
+  max-height: 30rem;
+}
+.about-me .conect-with-me dialog .container-form form .enviar {
+  margin-top: 2rem;
+  width: 50%;
+  background-color: #c9c9c9;
+  border: none;
+  padding: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.about-me .conect-with-me dialog .container-form form .enviar:hover {
+  background-color: #5c5c5c;
+  color: white;
+  outline: 1px solid white;
+}
 .about-me .conect-with-me .container-box-contact {
   display: flex;
   justify-content: space-around;
@@ -173,92 +235,13 @@ body {
   font-size: 1.4rem;
 }
 .about-me .conect-with-me .container-box-contact .container-img-contact img {
+  cursor: pointer;
   width: 4rem;
 }
 .about-me .conect-with-me .container-box-contact .container-img-contact img:hover {
   transform: scale(1.1);
 }
 
-.eins-modal-content {
-  text-align: center;
-  background-color: #303030;
-  height: 35rem;
-  color: white;
-}
-.eins-modal-content .img-proyect {
-  margin: AUTO;
-  width: 40rem;
-  height: 15rem;
-  overflow: hidden;
-}
-.eins-modal-content .img-proyect img {
-  width: 100%;
-}
-.eins-modal-content p {
-  font-size: 1.4rem;
-}
-.eins-modal-content a {
-  color: #FF1493;
-  text-decoration: none;
-  font-size: 1.8rem;
-}
-.eins-modal-content a:hover {
-  color: yellow;
-}
-
-/********************FORM STYLES*******************/
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  height: 23rem;
-}
-form label {
-  color: yellow;
-  font-size: 2rem;
-  margin-top: 2rem;
-}
-form input {
-  border: none;
-  border: 1px solid white;
-  color: white;
-  background-color: rgba(66, 66, 66, 0.808);
-  width: 70%;
-  font-size: 1.5rem;
-}
-form input:focus {
-  outline: none;
-}
-form textarea {
-  background-color: #363434;
-  color: white;
-  width: 70%;
-  min-width: 10rem;
-  max-width: 80%;
-  min-height: 10rem;
-}
-form textarea:focus {
-  outline: none;
-}
-form button {
-  margin: auto;
-  background-color: #FF1493;
-  width: 30%;
-  border: none;
-  padding: 0.6rem;
-  border-radius: 2px;
-  font-weight: 600;
-  text-transform: uppercase;
-  min-width: 10rem;
-  color: white;
-  margin-top: 2rem;
-}
-form button:hover {
-  background-color: white;
-}
-
-/******************** FIN FORM STYLES*******************/
 .skills {
   text-align: center;
   color: white;
@@ -335,7 +318,6 @@ form button:hover {
   background-repeat: no-repeat;
   background-size: 80%;
   background-position: center -50rem;
-  /* EINS MODAL STYLE*/
 }
 .proyects .briefcase-section {
   backdrop-filter: blur(0.1rem);
@@ -356,12 +338,10 @@ form button:hover {
   border: 1px solid white;
   transition: transform 0.24s ease;
   z-index: 998;
+  cursor: pointer;
 }
 .proyects .modal-proyect-grid img:hover {
   transform: scale(1.1);
-}
-.proyects .eins-modal-content .pw-content img {
-  width: 2rem !important;
 }
 
 footer {
@@ -410,8 +390,8 @@ footer .version .version- {
   }
 
   .container-header {
-    opacity: 0;
     transition: opacity 0.3s;
+    display: none;
   }
   .container-header nav {
     text-align: center;
@@ -452,9 +432,7 @@ footer .version .version- {
   }
 
   .is-active-efect {
-    transition: transform 0.1s;
-    opacity: 1;
-    transition: opacity 0.3s;
+    display: flex;
   }
 
   .proyects {

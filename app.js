@@ -21,5 +21,12 @@ sr.reveal('.parrafo-about-me', {
 sr.reveal('.briefcase-section', {
     duration: 1600,
 });
+const dialog = document.querySelector('dialog'),
+    cancel = document.querySelector('#cancel'),
+    show = document.querySelector('#show');
+show.addEventListener('click', () => dialog.showModal())
+    cancel.addEventListener('click',()=>dialog.close())
 
 
+
+      

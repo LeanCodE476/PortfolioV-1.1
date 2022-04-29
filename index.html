@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
     <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css">
-    
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="node_modules/eins-modal/dist/css/eins-modal.min.css">
     <link rel="stylesheet" href="styles.css">
     <title>Portfolio Leandro Balmaceda V1.1</title>
@@ -46,8 +46,22 @@
                         <div class="container-img-contact"><p class="p-contact">LinkedIn</p>
                          <a href="https://www.linkedin.com/in/leandro-balmaceda-28b518209/" target="_blank" rel="noopener"><img src="images/linkedin-logo.webp" alt="linkedin-logo" loading='lazy'></a>
                         </div>
-                        <div class="container-img-contact"><p class="p-contact">Gmail</p>
-                            <a data-modal-id="message"><img src="images/gmail-logo.webp" alt="gmail-logo" loading='lazy'></a>
+                        <div class="container-img-contact">
+                            <p class="p-contact">Gmail</p>
+                            <a id="show"><img src="images/gmail-logo.webp" alt="gmail-logo" loading='lazy'></a>
+                            <dialog>
+                                <div class="container-form">
+                                    <form id="formulario1" name="formulario1" netfify>
+                                        <label for="correo">Tu correo:</label>
+                                        <input type="email">
+                                        <label for="mensaje">Tu mensaje</label>
+                                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                                        <button type="submit" class="enviar">Enviar</button>
+                                    </form>
+                                    <button id="cancel" class="salir">Salir</button>
+                                </div>
+                               
+                            </dialog>
                         </div>
             </div>                  
             </div>
@@ -89,7 +103,7 @@
             <div class="briefcase-section">
                 <H2>PROYECTOS</H2>
                 <div class="modal-proyect-grid">
-                    <div><a data-modal-id="proyect-1"><img src="img/Amoled-Backgrounds.png" alt="" loading='lazy'></a></div>
+                    <div><a href="https://listadetareasv1-1.netlify.app/" target="_blank" rel="noopener"><img src="images/todo-list.png" alt="" loading='lazy'></a></div>
                 </div>
             </div>
         </section>
@@ -104,38 +118,6 @@
                 V1.1
             </p></div>
         </footer>
-
-    <!-- **********************MODAL-EINS********************************** -->
-       <!-- modal section proyect-1-->
-          <div id="proyect-1" class="eins-modal" data-options="openTransition: expandIn; openDuration:200;">
-            <div class="eins-modal-content">
-                <div class="eins-modal-close"></div>
-                    <div class="pw-content">
-                        <h1>Todo List</h1>
-                        <div class="img-proyect">
-                            <img src="img/web-image.jpg" alt="" loading='lazy'>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, aperiam repellat dolor dolorum ratione dicta ullam provident repudiandae nihil quibusdam aspernatur ea molestias, vel praesentium eligendi quasi laborum? Totam, repellendus?</p>
-                        <a href="">Ver pagina</a>
-                        
-                    </div>
-            </div>
-        </div>
-
-
-<!-- *******************FORM************************* -->
-    <div id="message" class="eins-modal" data-options="openTransition: expandIn; openDuration:200;">
-            <div class="eins-modal-content">
-                <div class="eins-modal-close"></div>
-               <form action="https://formspree.io/f/mgednqwg" method="post" class="form">
-                    <label for="email">Tu correo electronico:</label>
-                    <input name="Email" id="email" type="email" name="_replyto" class="email-background" required>
-                    <label>Tu mensaje:</label>
-                        <textarea name="message" required></textarea>
-                    <button type="submit">Enviar</button>
-                </form>
-            </div>
-    <!-- ******************* FIN FORM************************* -->
     <script src="app.js"></script>
     <script src="node_modules/eins-modal/dist/js/eins-modal.min.js"></script>
 </body>
