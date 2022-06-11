@@ -310,38 +310,37 @@ body {
 
 .proyects {
   border-top: 1px solid white;
-  height: 100vh;
+  height: auto;
   text-align: center;
   color: white;
   font-size: 2.5rem;
-  background-image: url(img/astronaut.jpg);
-  background-repeat: no-repeat;
-  background-size: 80%;
-  background-position: center -50rem;
+  padding-bottom: 5rem;
 }
-.proyects .briefcase-section {
-  backdrop-filter: blur(0.1rem);
-  -webkit-backdrop-filter: blur(0.1rem);
+.proyects .container-grid-proyect {
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-bottom: 2rem;
 }
-.proyects .briefcase-section h2 {
-  margin-top: 3rem;
-}
-.proyects .modal-proyect-grid {
+.proyects .container-grid-proyect .container-img-proyect {
+  overflow: hidden;
+  width: 35rem;
+  height: 24rem;
+  margin-top: 2rem;
+  border-radius: 1rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, auto));
-  gap: 1.5rem;
-  width: 50%;
-  margin: 3rem auto;
+  place-items: center;
 }
-.proyects .modal-proyect-grid img {
-  width: 100%;
-  border: 1px solid white;
-  transition: transform 0.24s ease;
-  z-index: 998;
-  cursor: pointer;
-}
-.proyects .modal-proyect-grid img:hover {
+.proyects .container-grid-proyect .container-img-proyect:hover {
+  transition: transform 0.5s;
   transform: scale(1.1);
+}
+.proyects .container-grid-proyect .container-img-proyect a img {
+  border-radius: 1rem;
+  width: 100%;
 }
 
 footer {
@@ -445,6 +444,16 @@ footer .version .version- {
 @media (max-width: 45rem) {
   .container-skills .container-img-skills {
     min-width: 30rem;
+  }
+
+  .proyects .container-grid-proyect {
+    margin: 5rem auto;
+    justify-content: center;
+    align-items: center;
+  }
+  .proyects .container-grid-proyect .container-img-proyect:hover {
+    transition: transform 0.5s;
+    transform: scale(1.1);
   }
 }
 

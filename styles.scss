@@ -344,45 +344,42 @@ body{
 }
 .proyects{
     border-top: 1px solid $color-white;
-    height: 100vh;
+    height: auto;
     text-align: center;
     color: $color-white;
     font-size: 2.5rem;
-    background-image: url(img/astronaut.jpg);
-    background-repeat: no-repeat;
-    background-size: 80%;
-    background-position: center -50rem;
-        .briefcase-section{
-            backdrop-filter: blur(.1rem);
-            -webkit-backdrop-filter: blur(.1rem);
-            h2{
-                margin-top: 3rem;
-            }
-
-        }
-    .modal-proyect-grid {
+    padding-bottom: 5rem;
+    .container-grid-proyect{
+        margin: 0 auto;
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        padding-bottom: 2rem;
+        
+    
+    
+      .container-img-proyect{
+        overflow: hidden;
+        width: 35rem;
+        height: 24rem;
+        margin-top: 2rem;
+        border-radius: 1rem;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(15rem, auto));
-        gap: 1.5rem;
-        width: 50%;
-        margin:3rem auto;
-
-     
+        place-items: center;
+        &:hover{
+            transition: transform .5s;
+            transform: scale(1.1);
+        }
+        a{
+            img{
+                border-radius: 1rem;
+                width: 100%;
+            }
+        }
+      }
     }
-    
-    .modal-proyect-grid img {
-        width: 100%;
-        border: 1px solid white;
-        transition: transform .24s ease;
-        z-index: 998;
-        cursor: pointer;
-    }
-    
-    .modal-proyect-grid img:hover {
-        transform: scale(1.1);
-    }
-   
-
       
     }
     footer{
@@ -497,6 +494,25 @@ body{
             min-width: 30rem;
 
         }
+    }
+  .proyects{
+
+    .container-grid-proyect{
+
+        margin: 5rem auto;
+        justify-content: center;
+        align-items: center;
+        
+    
+    
+      .container-img-proyect{
+        &:hover{
+            transition: transform .5s ;
+            transform: scale(1.1);
+        }
+      }
+    }
+      
     }
 }
 
